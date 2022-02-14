@@ -1,0 +1,343 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.18 of Day Month 20?? (rev: b9ab320)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 122 and seed -6674312785613846151 with 4 workers on 8 cores with 1214MB heap and 2730MB offheap memory [pid: 65396] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/rchavesferna/git_tree/tla+/learning.toolbox/ReportingProcessor/MC.tla
+Parsing file /Users/rchavesferna/git_tree/tla+/learning.toolbox/ReportingProcessor/learning.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202202030211/tla2sany/StandardModules/TLC.tla
+Parsing file /Users/rchavesferna/git_tree/tla+/learning.toolbox/ReportingProcessor/ReportProcessorCommittingEarly.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202202030211/tla2sany/StandardModules/Integers.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202202030211/tla2sany/StandardModules/Sequences.tla
+Parsing file /Users/rchavesferna/git_tree/tla+/learning.toolbox/ReportingProcessor/Helpers.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202202030211/tla2sany/StandardModules/Naturals.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202202030211/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module Helpers
+Semantic processing of module ReportProcessorCommittingEarly
+Semantic processing of module learning
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2022-02-09 10:31:53)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2022-02-09 10:31:54.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant ProcessedCompleteAndInOrderInvariant is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ processed = <<>>
+/\ action = "consuming_pay_report"
+/\ memoryDb = <<>>
+/\ retryQueue = <<>>
+/\ payReportQueue = <<1, 2>>
+/\ currentItem = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <ConsumePayReport line 25, col 21 to line 30, col 65 of module ReportProcessorCommittingEarly>
+/\ processed = <<>>
+/\ action = "committing"
+/\ memoryDb = <<>>
+/\ retryQueue = <<>>
+/\ payReportQueue = <<2>>
+/\ currentItem = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <PanicConsumer line 72, col 18 to line 73, col 91 of module ReportProcessorCommittingEarly>
+/\ processed = <<>>
+/\ action = "consuming_pay_report"
+/\ memoryDb = <<>>
+/\ retryQueue = <<>>
+/\ payReportQueue = <<2>>
+/\ currentItem = 1
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <ConsumePayReport line 25, col 21 to line 30, col 65 of module ReportProcessorCommittingEarly>
+/\ processed = <<>>
+/\ action = "committing"
+/\ memoryDb = <<>>
+/\ retryQueue = <<>>
+/\ payReportQueue = <<>>
+/\ currentItem = 2
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <ConsumePayReportError line 43, col 26 to line 47, col 89 of module ReportProcessorCommittingEarly>
+/\ processed = <<>>
+/\ action = "put_in_memory_db"
+/\ memoryDb = <<2>>
+/\ retryQueue = <<>>
+/\ payReportQueue = <<>>
+/\ currentItem = 2
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <PutInRetryQueue line 51, col 20 to line 54, col 81 of module ReportProcessorCommittingEarly>
+/\ processed = <<>>
+/\ action = "consuming_pay_report"
+/\ memoryDb = <<2>>
+/\ retryQueue = <<2>>
+/\ payReportQueue = <<>>
+/\ currentItem = 2
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <ConsumeRetryQueueSucc line 59, col 26 to line 64, col 74 of module ReportProcessorCommittingEarly>
+/\ processed = <<2>>
+/\ action = "consuming_pay_report"
+/\ memoryDb = <<>>
+/\ retryQueue = <<>>
+/\ payReportQueue = <<>>
+/\ currentItem = 2
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2022-02-09 10:31:54
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 12, col 1 to line 12, col 4 of module ReportProcessorCommittingEarly>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 12, col 9 to line 17, col 39 of module ReportProcessorCommittingEarly: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ConsumePayReport line 25, col 1 to line 25, col 16 of module ReportProcessorCommittingEarly>: 5:7
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 25, col 21 to line 25, col 42 of module ReportProcessorCommittingEarly: 42
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 25, col 21 to line 25, col 34 of module ReportProcessorCommittingEarly: 35
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 25, col 39 to line 25, col 42 of module ReportProcessorCommittingEarly: 35
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 26, col 21 to line 26, col 51 of module ReportProcessorCommittingEarly: 17
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 26, col 21 to line 26, col 26 of module ReportProcessorCommittingEarly: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 27, col 21 to line 27, col 42 of module ReportProcessorCommittingEarly: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 21 to line 28, col 55 of module ReportProcessorCommittingEarly: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 29, col 21 to line 29, col 58 of module ReportProcessorCommittingEarly: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 30, col 21 to line 30, col 65 of module ReportProcessorCommittingEarly: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ConsumePayReportSucc line 35, col 1 to line 35, col 20 of module ReportProcessorCommittingEarly>: 1:2
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 25 to line 35, col 46 of module ReportProcessorCommittingEarly: 35
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 35, col 25 to line 35, col 38 of module ReportProcessorCommittingEarly: 33
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 35, col 43 to line 35, col 46 of module ReportProcessorCommittingEarly: 33
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 25 to line 36, col 39 of module ReportProcessorCommittingEarly: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 36, col 25 to line 36, col 32 of module ReportProcessorCommittingEarly: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 36, col 36 to line 36, col 39 of module ReportProcessorCommittingEarly: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 37, col 25 to line 37, col 45 of module ReportProcessorCommittingEarly: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 37, col 25 to line 37, col 30 of module ReportProcessorCommittingEarly: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 38, col 25 to line 38, col 56 of module ReportProcessorCommittingEarly: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 39, col 25 to line 39, col 61 of module ReportProcessorCommittingEarly: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 40, col 25 to line 40, col 87 of module ReportProcessorCommittingEarly: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ConsumePayReportError line 43, col 1 to line 43, col 21 of module ReportProcessorCommittingEarly>: 5:7
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 43, col 26 to line 43, col 62 of module ReportProcessorCommittingEarly: 40
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 43, col 26 to line 43, col 36 of module ReportProcessorCommittingEarly: 33
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 43, col 45 to line 43, col 62 of module ReportProcessorCommittingEarly: 33
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 44, col 26 to line 44, col 46 of module ReportProcessorCommittingEarly: 22
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 44, col 26 to line 44, col 31 of module ReportProcessorCommittingEarly: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 45, col 26 to line 45, col 53 of module ReportProcessorCommittingEarly: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 46, col 26 to line 46, col 66 of module ReportProcessorCommittingEarly: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 47, col 26 to line 47, col 89 of module ReportProcessorCommittingEarly: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<PutInRetryQueue line 51, col 1 to line 51, col 15 of module ReportProcessorCommittingEarly>: 5:6
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 20 to line 51, col 46 of module ReportProcessorCommittingEarly: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 51, col 20 to line 51, col 25 of module ReportProcessorCommittingEarly: 32
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 52, col 20 to line 52, col 51 of module ReportProcessorCommittingEarly: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 53, col 20 to line 53, col 64 of module ReportProcessorCommittingEarly: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 20 to line 54, col 81 of module ReportProcessorCommittingEarly: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ConsumeRetryQueueSucc line 59, col 1 to line 59, col 21 of module ReportProcessorCommittingEarly>: 2:9
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 59, col 26 to line 59, col 43 of module ReportProcessorCommittingEarly: 39
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 59, col 26 to line 59, col 35 of module ReportProcessorCommittingEarly: 31
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 59, col 40 to line 59, col 43 of module ReportProcessorCommittingEarly: 31
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 60, col 26 to line 60, col 58 of module ReportProcessorCommittingEarly: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 60, col 26 to line 60, col 41 of module ReportProcessorCommittingEarly: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 60, col 45 to line 60, col 58 of module ReportProcessorCommittingEarly: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 61, col 26 to line 61, col 67 of module ReportProcessorCommittingEarly: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 61, col 39 to line 61, col 67 of module ReportProcessorCommittingEarly: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 62, col 26 to line 62, col 51 of module ReportProcessorCommittingEarly: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 62, col 38 to line 62, col 51 of module ReportProcessorCommittingEarly: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 63, col 26 to line 63, col 55 of module ReportProcessorCommittingEarly: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 63, col 40 to line 63, col 55 of module ReportProcessorCommittingEarly: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 64, col 26 to line 64, col 74 of module ReportProcessorCommittingEarly: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ConsumeRetryQueueError line 67, col 1 to line 67, col 22 of module ReportProcessorCommittingEarly>: 1:9
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 67, col 27 to line 67, col 44 of module ReportProcessorCommittingEarly: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 67, col 27 to line 67, col 36 of module ReportProcessorCommittingEarly: 29
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 67, col 41 to line 67, col 44 of module ReportProcessorCommittingEarly: 29
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 27 to line 68, col 82 of module ReportProcessorCommittingEarly: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 69, col 27 to line 69, col 96 of module ReportProcessorCommittingEarly: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<PanicConsumer line 72, col 1 to line 72, col 13 of module ReportProcessorCommittingEarly>: 10:29
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 72, col 18 to line 72, col 49 of module ReportProcessorCommittingEarly: 29
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 73, col 18 to line 73, col 91 of module ReportProcessorCommittingEarly: 29
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<TypeOK line 9, col 1 to line 9, col 6 of module ReportProcessorCommittingEarly>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 10, col 3 to line 10, col 119 of module ReportProcessorCommittingEarly: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<ProcessedCompleteAndInOrderInvariant line 83, col 1 to line 83, col 36 of module ReportProcessorCommittingEarly>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 84, col 5 to line 90, col 13 of module ReportProcessorCommittingEarly: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 84, col 8 to line 84, col 25 of module ReportProcessorCommittingEarly: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 86, col 13 to line 88, col 69 of module ReportProcessorCommittingEarly: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 89, col 12 to line 89, col 28 of module ReportProcessorCommittingEarly: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 90, col 10 to line 90, col 13 of module ReportProcessorCommittingEarly: 22
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(8) at 2022-02-09 10:31:54: 62 states generated (1.775 s/min), 30 distinct states found (859 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+62 states generated, 30 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 8.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 2117ms at (2022-02-09 10:31:54)
+@!@!@ENDMSG 2186 @!@!@

@@ -1,0 +1,182 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2188:0 @!@!@
+Running Random Simulation with seed 1116875991754258751 with 2 workers on 4 cores with 608MB heap and 1365MB offheap memory [pid: 72659] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64).
+@!@!@ENDMSG 2188 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/rchaves/Projects/tla+/learning.toolbox/GroupRecon/MC.tla
+Parsing file /Users/rchaves/Projects/tla+/learning.toolbox/GroupRecon/learning.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
+Parsing file /Users/rchaves/Projects/tla+/learning.toolbox/GroupRecon/GroupRecon.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Integers.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module GroupRecon
+Semantic processing of module learning
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2021-08-07 19:39:52)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 1 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant PayoutIsAvailableInClientAPI is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ groupReconConsumer = {}
+/\ groupReconPayouts = {}
+/\ clientAPIDatabase = {}
+/\ withdrawId = 0
+/\ withdrawStream = {}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <ProduceWithdraw line 20, col 20 to line 22, col 89 of module GroupRecon>
+/\ groupReconConsumer = {}
+/\ groupReconPayouts = {}
+/\ clientAPIDatabase = {}
+/\ withdrawId = 1
+/\ withdrawStream = {1}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <GroupReconWithdrawConsume line 27, col 30 to line 28, col 107 of module GroupRecon>
+/\ groupReconConsumer = {1}
+/\ groupReconPayouts = {}
+/\ clientAPIDatabase = {}
+/\ withdrawId = 1
+/\ withdrawStream = {1}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <GeneratePayouts line 30, col 20 to line 31, col 98 of module GroupRecon>
+/\ groupReconConsumer = {1}
+/\ groupReconPayouts = {1}
+/\ clientAPIDatabase = {}
+/\ withdrawId = 1
+/\ withdrawStream = {1}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2021-08-07 19:39:52
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 7, col 1 to line 7, col 4 of module GroupRecon>: 1:1
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 7, col 9 to line 11, col 30 of module GroupRecon: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ProduceWithdraw line 20, col 1 to line 20, col 15 of module GroupRecon>: 0:105
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 20, col 20 to line 21, col 74 of module GroupRecon: 105
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 22, col 20 to line 22, col 89 of module GroupRecon: 105
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ClientAPIConsume line 24, col 1 to line 24, col 16 of module GroupRecon>: 0:108
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 24, col 21 to line 24, col 80 of module GroupRecon: 108
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 25, col 21 to line 25, col 99 of module GroupRecon: 108
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<GroupReconWithdrawConsume line 27, col 1 to line 27, col 25 of module GroupRecon>: 0:117
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 27, col 30 to line 27, col 91 of module GroupRecon: 117
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 27, col 52 to line 27, col 91 of module GroupRecon: 118
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 30 to line 28, col 107 of module GroupRecon: 117
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<GeneratePayouts line 30, col 1 to line 30, col 15 of module GroupRecon>: 0:108
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 30, col 20 to line 30, col 83 of module GroupRecon: 109
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 31, col 20 to line 31, col 98 of module GroupRecon: 109
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<TypeOK line 13, col 1 to line 13, col 6 of module GroupRecon>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 13, col 11 to line 16, col 56 of module GroupRecon: 706
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 13, col 11 to line 15, col 53 of module GroupRecon: 707
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 13, col 11 to line 14, col 52 of module GroupRecon: 708
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 13, col 11 to line 13, col 38 of module GroupRecon: 709
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 13, col 11 to line 13, col 24 of module GroupRecon: 710
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 13, col 36 to line 13, col 38 of module GroupRecon: 712
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 14, col 11 to line 14, col 52 of module GroupRecon: 712
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 15, col 11 to line 15, col 53 of module GroupRecon: 714
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 16, col 11 to line 16, col 56 of module GroupRecon: 715
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<PayoutIsAvailableInClientAPI line 18, col 1 to line 18, col 28 of module GroupRecon>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 18, col 33 to line 18, col 77 of module GroupRecon: 719
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<inv_1628357990960202000 line 5, col 1 to line 5, col 23 of module MC>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 1 to line 6, col 5 of module MC: 703
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2209:0 @!@!@
+Progress(-1) at 2021-08-07 19:39:52: 727 states generated, -1 distinct states found, -1 states left on queue.
+@!@!@ENDMSG 2209 @!@!@
+@!@!@STARTMSG 2210:0 @!@!@
+The number of states generated: 729
+Simulation using seed 1116875991754258751 and aril 0
+@!@!@ENDMSG 2210 @!@!@
+@!@!@STARTMSG 2209:0 @!@!@
+Progress(-1) at 2021-08-07 19:39:52: 799 states generated, -1 distinct states found, -1 states left on queue.
+@!@!@ENDMSG 2209 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1520ms at (2021-08-07 19:39:52)
+@!@!@ENDMSG 2186 @!@!@

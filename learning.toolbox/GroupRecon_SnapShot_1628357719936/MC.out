@@ -1,0 +1,163 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 19 and seed 3200303869676701010 with 2 workers on 4 cores with 608MB heap and 1365MB offheap memory [pid: 72633] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/rchaves/Projects/tla+/learning.toolbox/GroupRecon/MC.tla
+Parsing file /Users/rchaves/Projects/tla+/learning.toolbox/GroupRecon/learning.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
+Parsing file /Users/rchaves/Projects/tla+/learning.toolbox/GroupRecon/GroupRecon.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Integers.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module GroupRecon
+Semantic processing of module learning
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2021-08-07 19:35:17)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2021-08-07 19:35:18.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant PayoutIsAvailableInClientAPI is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ groupReconConsumer = {}
+/\ groupReconPayouts = {}
+/\ clientAPIDatabase = {}
+/\ withdrawId = 0
+/\ withdrawStream = {}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <ProduceWithdraw line 20, col 20 to line 22, col 89 of module GroupRecon>
+/\ groupReconConsumer = {}
+/\ groupReconPayouts = {}
+/\ clientAPIDatabase = {}
+/\ withdrawId = 1
+/\ withdrawStream = {1}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <GroupReconWithdrawConsume line 27, col 30 to line 28, col 107 of module GroupRecon>
+/\ groupReconConsumer = {1}
+/\ groupReconPayouts = {}
+/\ clientAPIDatabase = {}
+/\ withdrawId = 1
+/\ withdrawStream = {1}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <GeneratePayouts line 30, col 20 to line 31, col 98 of module GroupRecon>
+/\ groupReconConsumer = {1}
+/\ groupReconPayouts = {1}
+/\ clientAPIDatabase = {}
+/\ withdrawId = 1
+/\ withdrawStream = {1}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2021-08-07 19:35:18
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 7, col 1 to line 7, col 4 of module GroupRecon>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 7, col 9 to line 11, col 30 of module GroupRecon: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ProduceWithdraw line 20, col 1 to line 20, col 15 of module GroupRecon>: 8:11
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 20, col 20 to line 21, col 74 of module GroupRecon: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 22, col 20 to line 22, col 89 of module GroupRecon: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ClientAPIConsume line 24, col 1 to line 24, col 16 of module GroupRecon>: 3:10
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 24, col 21 to line 24, col 80 of module GroupRecon: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 25, col 21 to line 25, col 99 of module GroupRecon: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<GroupReconWithdrawConsume line 27, col 1 to line 27, col 25 of module GroupRecon>: 5:10
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 27, col 30 to line 27, col 91 of module GroupRecon: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 30 to line 28, col 107 of module GroupRecon: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<GeneratePayouts line 30, col 1 to line 30, col 15 of module GroupRecon>: 2:9
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 30, col 20 to line 30, col 83 of module GroupRecon: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 30, col 41 to line 30, col 83 of module GroupRecon: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 31, col 20 to line 31, col 98 of module GroupRecon: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<TypeOK line 13, col 1 to line 13, col 6 of module GroupRecon>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 13, col 11 to line 16, col 56 of module GroupRecon: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<PayoutIsAvailableInClientAPI line 18, col 1 to line 18, col 28 of module GroupRecon>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 18, col 33 to line 18, col 77 of module GroupRecon: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<inv_1628357715910181000 line 5, col 1 to line 5, col 23 of module MC>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 1 to line 6, col 5 of module MC: 17
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(5) at 2021-08-07 19:35:18: 33 states generated (698 s/min), 19 distinct states found (402 ds/min), 9 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+33 states generated, 19 distinct states found, 9 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 5.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 2 (minimum is 1, the maximum 3 and the 95th percentile is 3).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 2845ms at (2021-08-07 19:35:18)
+@!@!@ENDMSG 2186 @!@!@

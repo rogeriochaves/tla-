@@ -1,0 +1,287 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.18 of Day Month 20?? (rev: b9ab320)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 96 and seed -544646956826921599 with 4 workers on 8 cores with 1214MB heap and 2730MB offheap memory [pid: 65162] (Mac OS X 10.16 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/rchavesferna/git_tree/tla+/learning.toolbox/ReportingProcessor/MC.tla
+Parsing file /Users/rchavesferna/git_tree/tla+/learning.toolbox/ReportingProcessor/learning.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202202030211/tla2sany/StandardModules/TLC.tla
+Parsing file /Users/rchavesferna/git_tree/tla+/learning.toolbox/ReportingProcessor/ReportProcessorWithoutMemoryDb.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202202030211/tla2sany/StandardModules/Integers.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202202030211/tla2sany/StandardModules/Sequences.tla
+Parsing file /Users/rchavesferna/git_tree/tla+/learning.toolbox/ReportingProcessor/Helpers.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202202030211/tla2sany/StandardModules/Naturals.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202202030211/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module Helpers
+Semantic processing of module ReportProcessorWithoutMemoryDb
+Semantic processing of module learning
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2022-02-09 10:17:05)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2022-02-09 10:17:06.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant ProcessedCompleteAndInOrderInvariant is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ processed = <<>>
+/\ action = "consuming_pay_report"
+/\ retryQueue = <<>>
+/\ payReportQueue = <<1, 2>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <ConsumePayReportError line 30, col 26 to line 34, col 64 of module ReportProcessorWithoutMemoryDb>
+/\ processed = <<>>
+/\ action = "put_in_retry_queue"
+/\ retryQueue = <<1>>
+/\ payReportQueue = <<1, 2>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <CommitToPayReport line 37, col 22 to line 40, col 56 of module ReportProcessorWithoutMemoryDb>
+/\ processed = <<>>
+/\ action = "consuming_pay_report"
+/\ retryQueue = <<1>>
+/\ payReportQueue = <<2>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <ConsumePayReportSucc line 23, col 25 to line 27, col 64 of module ReportProcessorWithoutMemoryDb>
+/\ processed = <<2>>
+/\ action = "processing_successfull"
+/\ retryQueue = <<1>>
+/\ payReportQueue = <<2>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2022-02-09 10:17:06
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 12, col 1 to line 12, col 4 of module ReportProcessorWithoutMemoryDb>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 12, col 9 to line 15, col 39 of module ReportProcessorWithoutMemoryDb: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ConsumePayReportSucc line 23, col 1 to line 23, col 20 of module ReportProcessorWithoutMemoryDb>: 15:25
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 23, col 25 to line 23, col 46 of module ReportProcessorWithoutMemoryDb: 93
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 23, col 25 to line 23, col 38 of module ReportProcessorWithoutMemoryDb: 71
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 23, col 43 to line 23, col 46 of module ReportProcessorWithoutMemoryDb: 71
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 24, col 25 to line 24, col 55 of module ReportProcessorWithoutMemoryDb: 82
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 24, col 25 to line 24, col 30 of module ReportProcessorWithoutMemoryDb: 60
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 25, col 25 to line 25, col 58 of module ReportProcessorWithoutMemoryDb: 22
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 26, col 25 to line 26, col 70 of module ReportProcessorWithoutMemoryDb: 22
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 26, col 38 to line 26, col 70 of module ReportProcessorWithoutMemoryDb: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 18, col 22 to line 20, col 35 of module ReportProcessorWithoutMemoryDb: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 18, col 25 to line 18, col 55 of module ReportProcessorWithoutMemoryDb: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 19, col 27 to line 19, col 49 of module ReportProcessorWithoutMemoryDb: 17
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 20, col 27 to line 20, col 35 of module ReportProcessorWithoutMemoryDb: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 26, col 50 to line 26, col 69 of module ReportProcessorWithoutMemoryDb: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 27, col 25 to line 27, col 64 of module ReportProcessorWithoutMemoryDb: 22
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ConsumePayReportError line 30, col 1 to line 30, col 21 of module ReportProcessorWithoutMemoryDb>: 19:21
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 30, col 26 to line 30, col 47 of module ReportProcessorWithoutMemoryDb: 88
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 30, col 26 to line 30, col 39 of module ReportProcessorWithoutMemoryDb: 67
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 30, col 44 to line 30, col 47 of module ReportProcessorWithoutMemoryDb: 67
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 31, col 26 to line 31, col 56 of module ReportProcessorWithoutMemoryDb: 77
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 31, col 26 to line 31, col 31 of module ReportProcessorWithoutMemoryDb: 56
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 32, col 26 to line 32, col 55 of module ReportProcessorWithoutMemoryDb: 21
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 33, col 26 to line 33, col 79 of module ReportProcessorWithoutMemoryDb: 21
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 34, col 26 to line 34, col 64 of module ReportProcessorWithoutMemoryDb: 21
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<CommitToPayReport line 37, col 1 to line 37, col 17 of module ReportProcessorWithoutMemoryDb>: 24:35
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 37, col 23 to line 37, col 55 of module ReportProcessorWithoutMemoryDb: 77
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 37, col 23 to line 37, col 28 of module ReportProcessorWithoutMemoryDb: 66
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 37, col 60 to line 37, col 88 of module ReportProcessorWithoutMemoryDb: 90
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 37, col 60 to line 37, col 65 of module ReportProcessorWithoutMemoryDb: 66
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 38, col 22 to line 38, col 59 of module ReportProcessorWithoutMemoryDb: 35
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 39, col 22 to line 39, col 53 of module ReportProcessorWithoutMemoryDb: 35
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 40, col 22 to line 40, col 56 of module ReportProcessorWithoutMemoryDb: 35
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ConsumeRetryQueueSucc line 43, col 1 to line 43, col 21 of module ReportProcessorWithoutMemoryDb>: 4:57
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 43, col 26 to line 43, col 43 of module ReportProcessorWithoutMemoryDb: 123
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 43, col 26 to line 43, col 35 of module ReportProcessorWithoutMemoryDb: 66
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 43, col 40 to line 43, col 43 of module ReportProcessorWithoutMemoryDb: 66
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 44, col 26 to line 44, col 67 of module ReportProcessorWithoutMemoryDb: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 44, col 39 to line 44, col 67 of module ReportProcessorWithoutMemoryDb: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 18, col 22 to line 20, col 35 of module ReportProcessorWithoutMemoryDb: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 18, col 25 to line 18, col 55 of module ReportProcessorWithoutMemoryDb: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 19, col 27 to line 19, col 49 of module ReportProcessorWithoutMemoryDb: 21
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 20, col 27 to line 20, col 35 of module ReportProcessorWithoutMemoryDb: 36
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 44, col 51 to line 44, col 66 of module ReportProcessorWithoutMemoryDb: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 45, col 26 to line 45, col 55 of module ReportProcessorWithoutMemoryDb: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 46, col 26 to line 46, col 61 of module ReportProcessorWithoutMemoryDb: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ConsumeRetryQueueError line 49, col 1 to line 49, col 22 of module ReportProcessorWithoutMemoryDb>: 4:57
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 49, col 27 to line 49, col 44 of module ReportProcessorWithoutMemoryDb: 123
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 49, col 27 to line 49, col 36 of module ReportProcessorWithoutMemoryDb: 66
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 49, col 41 to line 49, col 44 of module ReportProcessorWithoutMemoryDb: 66
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 50, col 27 to line 50, col 82 of module ReportProcessorWithoutMemoryDb: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 27 to line 51, col 73 of module ReportProcessorWithoutMemoryDb: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<PanicConsumer line 54, col 1 to line 54, col 13 of module ReportProcessorWithoutMemoryDb>: 24:65
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 18 to line 54, col 49 of module ReportProcessorWithoutMemoryDb: 65
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 18 to line 55, col 68 of module ReportProcessorWithoutMemoryDb: 65
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<TypeOK line 9, col 1 to line 9, col 6 of module ReportProcessorWithoutMemoryDb>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 10, col 3 to line 10, col 85 of module ReportProcessorWithoutMemoryDb: 91
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<ProcessedCompleteAndInOrderInvariant line 64, col 1 to line 64, col 36 of module ReportProcessorWithoutMemoryDb>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 65, col 5 to line 71, col 13 of module ReportProcessorWithoutMemoryDb: 91
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 65, col 8 to line 65, col 25 of module ReportProcessorWithoutMemoryDb: 91
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 67, col 13 to line 69, col 69 of module ReportProcessorWithoutMemoryDb: 78
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 70, col 12 to line 70, col 28 of module ReportProcessorWithoutMemoryDb: 78
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 71, col 10 to line 71, col 13 of module ReportProcessorWithoutMemoryDb: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(11) at 2022-02-09 10:17:06: 255 states generated (6.945 s/min), 91 distinct states found (2.478 ds/min), 20 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+255 states generated, 91 distinct states found, 20 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 11.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 2235ms at (2022-02-09 10:17:06)
+@!@!@ENDMSG 2186 @!@!@
